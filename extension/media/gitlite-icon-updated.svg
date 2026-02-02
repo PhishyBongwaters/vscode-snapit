@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <!-- Background with subtle gradient -->
+    <defs>
+        <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2C3E50"/>
+            <stop offset="100%" style="stop-color:#233140"/>
+        </linearGradient>
+        <!-- Circuit pattern -->
+        <pattern id="circuitPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0 10h20 M10 0v20" stroke="#34495E" stroke-width="0.5"/>
+            <circle cx="10" cy="10" r="1" fill="#34495E"/>
+        </pattern>
+    </defs>
+    
+    <!-- Background -->
+    <rect width="128" height="128" rx="20" fill="url(#iconGradient)"/>
+    
+    <!-- Circuit pattern overlay for tech feel -->
+    <rect width="128" height="128" rx="20" fill="url(#circuitPattern)" opacity="0.1"/>
+    
+    <!-- File stack effect -->
+    <g transform="translate(24, 20)">
+        <!-- Bottom file with highlight -->
+        <rect x="20" y="20" width="60" height="70" rx="4" fill="#34495E"/>
+        <rect x="20" y="20" width="60" height="4" rx="2" fill="#3498DB" opacity="0.5"/>
+        
+        <!-- Middle file with highlight -->
+        <rect x="10" y="10" width="60" height="70" rx="4" fill="#2980B9"/>
+        <rect x="10" y="10" width="60" height="4" rx="2" fill="#3498DB" opacity="0.7"/>
+        
+        <!-- Top file with highlight -->
+        <rect x="0" y="0" width="60" height="70" rx="4" fill="#3498DB"/>
+        <rect x="0" y="0" width="60" height="4" rx="2" fill="#5DADE2"/>
+        
+        <!-- GitLite text in circle -->
+        <g transform="translate(30, 40)">
+            <circle cx="0" cy="0" r="24" fill="#ECF0F1"/>
+            <text x="0" y="-4" font-family="Arial, sans-serif" font-size="11" fill="#2C3E50" text-anchor="middle" font-weight="bold">GIT</text>
+            <text x="0" y="8" font-family="Arial, sans-serif" font-size="11" fill="#3498DB" text-anchor="middle" font-weight="bold">LITE</text>
+            <circle cx="0" cy="0" r="24" fill="none" stroke="#2C3E50" stroke-width="2"/>
+        </g>
+    </g>
+    
+    <!-- Decorative dots -->
+    <circle cx="24" cy="104" r="3" fill="#3498DB" opacity="0.5"/>
+    <circle cx="104" cy="24" r="3" fill="#3498DB" opacity="0.5"/>
+</svg>

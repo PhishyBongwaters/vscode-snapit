@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320">
+    <!-- Background with subtle gradient -->
+    <defs>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#2C3E50"/>
+            <stop offset="100%" style="stop-color:#233140"/>
+        </linearGradient>
+        <!-- Circuit board pattern -->
+        <pattern id="circuit" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+            <path d="M0 25h50 M25 0v50" stroke="#34495E" stroke-width="0.5"/>
+            <circle cx="25" cy="25" r="3" fill="#34495E"/>
+        </pattern>
+        <!-- Glow effect -->
+        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <!-- Main background -->
+    <rect width="1280" height="320" fill="url(#bgGradient)"/>
+    
+    <!-- Circuit pattern overlay -->
+    <rect width="1280" height="320" fill="url(#circuit)" opacity="0.1"/>
+
+    <!-- Left side visualization -->
+    <g transform="translate(80, 40)">
+        <!-- Timeline representation -->
+        <g transform="translate(0, 100) scale(0.9)">
+            <!-- Base timeline -->
+            <line x1="0" y1="50" x2="300" y2="50" stroke="#3498DB" stroke-width="2" opacity="0.3"/>
+            
+            <!-- Snapshot points -->
+            <g transform="translate(0, 50)">
+                <!-- Point 1 -->
+                <circle cx="50" cy="0" r="8" fill="#3498DB" opacity="0.6"/>
+                <text x="50" y="25" font-family="Arial" font-size="12" fill="#ECF0F1" text-anchor="middle">v1</text>
+                
+                <!-- Point 2 -->
+                <circle cx="150" cy="0" r="8" fill="#3498DB" opacity="0.8"/>
+                <text x="150" y="25" font-family="Arial" font-size="12" fill="#ECF0F1" text-anchor="middle">v2</text>
+                
+                <!-- Current point -->
+                <circle cx="250" cy="0" r="12" fill="#3498DB" filter="url(#glow)"/>
+                <text x="250" y="25" font-family="Arial" font-size="12" fill="#ECF0F1" text-anchor="middle">Current</text>
+            </g>
+            
+            <!-- File representation -->
+            <g transform="translate(200, -30)">
+                <rect x="0" y="0" width="40" height="50" rx="4" fill="#3498DB"/>
+                <rect x="5" y="10" width="30" height="3" rx="1.5" fill="#ECF0F1" opacity="0.6"/>
+                <rect x="5" y="17" width="20" height="3" rx="1.5" fill="#ECF0F1" opacity="0.6"/>
+            </g>
+        </g>
+    </g>
+
+    <!-- Main Title -->
+    <g transform="translate(480, 100)">
+        <text x="0" y="0" font-family="Arial" font-size="82" fill="white" font-weight="bold">GitLite</text>
+        <text x="0" y="50" font-family="Arial" font-size="36" fill="#3498DB" font-weight="normal">Lightweight Version Control for VS Code</text>
+    </g>
+
+    <!-- Feature boxes -->
+    <g transform="translate(480, 180)">
+        <!-- Quick Snapshots -->
+        <g transform="translate(0, 0)">
+            <rect x="0" y="0" width="220" height="80" rx="10" fill="#34495E" stroke="#3498DB" stroke-width="2"/>
+            <text x="110" y="35" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Quick Versions</text>
+            <text x="110" y="55" font-family="Arial" font-size="14" fill="#3498DB" text-anchor="middle">Save states instantly</text>
+        </g>
+        
+        <!-- Easy Restore -->
+        <g transform="translate(240, 0)">
+            <rect x="0" y="0" width="220" height="80" rx="10" fill="#34495E" stroke="#3498DB" stroke-width="2"/>
+            <text x="110" y="35" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Easy Restore</text>
+            <text x="110" y="55" font-family="Arial" font-size="14" fill="#3498DB" text-anchor="middle">Time travel made simple</text>
+        </g>
+        
+        <!-- Lightweight -->
+        <g transform="translate(480, 0)">
+            <rect x="0" y="0" width="220" height="80" rx="10" fill="#34495E" stroke="#3498DB" stroke-width="2"/>
+            <text x="110" y="35" font-family="Arial" font-size="18" fill="white" text-anchor="middle" font-weight="bold">Lightweight</text>
+            <text x="110" y="55" font-family="Arial" font-size="14" fill="#3498DB" text-anchor="middle">Zero configuration</text>
+        </g>
+    </g>
+</svg>
